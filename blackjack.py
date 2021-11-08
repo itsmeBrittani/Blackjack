@@ -10,15 +10,20 @@ class Player:
 class CPU(Player):
     pass
 
+player_one = Player([])
 
 # cpu_hand = []
 # player_hand = []
 # cpu_score = 0
 # player_score = 0
 
-deck = {AH: 11, AS: 11, AD: 11, AC: 11, H1: 1, H2: 2, H3: 3, H4: 4, H5: 5, H6: 6, H7: 7, H8: 8, H9: 9, HJ: 10, HQ: 10, HK: 10, S1: 1, S2: 2, S3: 3, S4: 4, S5: 5, S6: 6, S7: 7, S8: 8, S9: 9, SJ: 10, SQ: 10, SK: 10, D1: 1, D2: 2, D3: 3, D4: 4, D5: 5, D6: 6, D7: 7, D8: 8, D9: 9, DJ: 10, DQ: 10, DK: 10, C1: 1, C2: 2, C3: 3, C4: 4, C5: 5, C6: 6, C7: 7, C8: 8, C9: 9, CJ: 10, CQ: 10, CK: 10}
+deck = {
+    'AH': 11, 'AS': 11, 'AD': 11, 'AC': 11, 'H1': 1, 'H2': 2, 'H3': 3, 'H4': 4, 'H5': 5, 'H6': 6, 'H7': 7, 'H8': 8, 'H9': 9, 'HJ': 10, 'HQ': 10, 'HK': 10, 
+    'S1': 1, 'S2': 2, 'S3': 3, 'S4': 4, 'S5': 5, 'S6': 6, 'S7': 7, 'S8': 8, 'S9': 9, 'SJ': 10, 'SQ': 10, 'SK': 10, 'D1': 1, 'D2': 2, 'D3': 3, 'D4': 4, 'D5': 5, 
+    'D6': 6, 'D7': 7, 'D8': 8, 'D9': 9, 'DJ': 10, 'DQ': 10, 'DK': 10, 'C1': 1, 'C2': 2, 'C3': 3, 'C4': 4, 'C5': 5, 'C6': 6, 'C7': 7, 'C8': 8, 'C9': 9, 'CJ': 10, 'CQ': 10, 'CK': 10
+    }
 
-def draw():
+def deal():
     pass
 #pick two random cards from the deck for both hands
 
@@ -45,3 +50,14 @@ def hit_me():
 def lets_stay():
     pass
 
+def start_game():
+    print('\nLet\'s play Blackjack! \nThe player with 21 or the highest number under 21 wins. \nIf you go over 21, you BUST and lose.\n')
+    start_input = input('Ready to start? Type DEAL: ')
+    if start_input == 'DEAL' or start_input == 'deal':
+        print('Okay, let\'s get started!!')
+        deal()
+    else:
+        print('Oh well... maybe another time. Let me ask again.')
+        start_game()
+
+start_game()

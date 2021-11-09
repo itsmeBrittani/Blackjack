@@ -51,13 +51,14 @@ def lets_stay():
     pass
 
 def start_game():
-    print('\nLet\'s play Blackjack! \nThe player with 21 or the highest number under 21 wins. \nIf you go over 21, you BUST and lose.\n')
+    print('\nLet\'s play Blackjack! \n\nThe player with 21 or the highest number under 21 wins. \nIf you go over 21, you BUST and lose.\n You can choose to hit for another card or stay to stick with the total you have.')
     start_input = input('Ready to start? Type DEAL: ')
-    if start_input == 'DEAL' or start_input == 'deal':
-        print('Okay, let\'s get started!!')
+    cleaned_input = start_input.strip()
+    if cleaned_input == 'DEAL' or cleaned_input == 'deal':
+        print('Okay, let\'s get started!!!')
         deal()
     else:
-        print('Oh well... maybe another time. Let me ask again.')
+        print('\nOh well... maybe another time. \n ------------------------------')
         start_game()
 
 start_game()
